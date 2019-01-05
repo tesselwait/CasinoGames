@@ -80,7 +80,7 @@ public class RouletteWheel {
 		int lastWallet;
 		for(int i=0; i<n; i++) {
 			lastWallet = wallet;
-			if(wallet<=0||minBet>wallet) {
+			if(wallet<minBet) {
 				System.out.println("Busted out.");
 				bust = true;
 			}
