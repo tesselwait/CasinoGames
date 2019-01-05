@@ -1,6 +1,8 @@
 import java.util.*;
 public class RouletteWheel {
-	//Reverse roulette lottery with a 'black or red: double previous bet after loss, minimum bet after win' strategy with $10,000,000 bank in $1,000,000 max bet.
+	//Reverse roulette lottery with a 'black or red: double previous bet after loss, 
+	//minimum bet after win' strategy with $10,000,000 bank in $1,000,000 max bet.
+	
 	Map<Integer, Integer> table;
 	int winNum;
 	Random gen;
@@ -60,9 +62,7 @@ public class RouletteWheel {
 	
 	public void betBlack(int x) {
 		spin();
-		boolean win=false;
-		if(table.get(winNum)==2)
-				win=true;
+		boolean win = isBlack(winNum);
 		if(win) {
 			System.out.println("win, plus: "+x);
 			wallet+=x;
