@@ -87,7 +87,7 @@ public class RouletteWheel {
 			else {
 			betBlack(bet);
 			if(wallet<lastWallet)
-				if(bet*2<maxBet) {
+				if(bet*2<maxBet&&bet*2<=wallet) {
 					bet*=2;
 				}
 				else {
